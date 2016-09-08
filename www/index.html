@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slideshow</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <div class="slideshow" id="slideshow">
+    <h1 class="slideshow__heading">Slideshow</h1>
+    <ol class="slideshow__slideContainer negative" id="slides"></ol>
+    <div class="slideshow__toolbar" aria-controls="slides">
+      <span class="slideshow__status" aria-live="polite">Laster...</span>
+      <button class="button slideshow__prevButton" aria-label="Åpne forrige bilde">&larr;</button>
+      <button class="button slideshow__nextButton" aria-label="Åpne neste bilde">&rarr;</button>
+    </div>
+  </div>
+  <script type="application/json" id="initialState">{
+    "activeIndex": 0,
+    "slides": [
+      {"title": "A", "caption": "Stor A"},
+      {"title": "B", "caption": "Stor B"},
+      {"title": "C", "caption": "Stor C"},
+      {"title": "D", "caption": "Stor D"},
+      {"title": "E", "caption": "Stor E"},
+      {"title": "F", "caption": "Stor F"},
+      {"title": "G", "caption": "Stor G"},
+      {"title": "H", "caption": "Stor H"},
+      {"title": "I", "caption": "Stor I"},
+      {"title": "J", "caption": "Stor J"},
+      {"title": "K", "caption": "Stor K"},
+      {"title": "L", "caption": "Stor L"},
+      {"title": "M", "caption": "Stor M"},
+      {"title": "N", "caption": "Stor N"},
+      {"title": "O", "caption": "Stor O"},
+      {"title": "P", "caption": "Stor P"},
+      {"title": "Q", "caption": "Stor Q"},
+      {"title": "R", "caption": "Stor R"},
+      {"title": "S", "caption": "Stor S"},
+      {"title": "T", "caption": "Stor T"},
+      {"title": "U", "caption": "Stor U"},
+      {"title": "V", "caption": "Stor V"},
+      {"title": "W", "caption": "Stor W"},
+      {"title": "X", "caption": "Stor X"},
+      {"title": "Y", "caption": "Stor Y"},
+      {"title": "Z", "caption": "Stor Z"},
+      {"title": "Æ", "caption": "Stor Æ"},
+      {"title": "Ø", "caption": "Stor Ø"},
+      {"title": "Å", "caption": "Stor Å"}
+    ]
+  }</script>
+  <script src="bundle.js"></script>
+</body>
+</html>

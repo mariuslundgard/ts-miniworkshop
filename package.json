@@ -1,0 +1,43 @@
+{
+  "name": "ts-miniworkshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "buddy watch --serve --reload"
+  },
+  "author": "Marius Lundgård <marius.lundgard@nrk.no>",
+  "license": "ISC",
+  "devDependencies": {
+    "buddy": "5.1.4",
+    "buddy-plugin-babel": "6.13.2-1",
+    "buddy-plugin-csso": "2.2.0",
+    "buddy-server": "1.0.1",
+    "eslint": "3.4.0",
+    "eslint-config-nrk": "4.0.0",
+    "typings": "^1.3.3"
+  },
+  "buddy": {
+    "build": {
+      "targets": [
+        {
+          "input": "js/main.css",
+          "output": "www/main.css"
+        },
+        {
+          "input": "js/index.html",
+          "output": "www/index.html"
+        },
+        {
+          "input": "js/bootstrap.js",
+          "output": "www/bundle.js"
+        }
+      ]
+    },
+    "server": {
+      "directory": "www",
+      "port": 8080
+    }
+  }
+}
