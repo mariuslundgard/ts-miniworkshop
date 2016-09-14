@@ -6,7 +6,7 @@ type Elements = {
 };
 
 export type Slide = {
-  title: string,
+  title: string;
   caption: string;
 };
 
