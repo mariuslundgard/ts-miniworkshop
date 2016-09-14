@@ -35,6 +35,11 @@ function slideshow (rootElement: Element, initialState: InitialState) {
     const activeSlide = slides[activeSlideIndex];
     const size = slides.length;
 
+    if (!size) {
+      elements.status.innerHTML = '';
+      return;
+    }
+
     deactivateElement(<Element>activeSlideElement);
     activeSlideElement = <Element>elements.slideContainer.childNodes[activeSlideIndex];
     activateElement(<Element>activeSlideElement);

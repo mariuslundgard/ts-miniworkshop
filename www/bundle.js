@@ -32,13 +32,18 @@ _m_['js/slideshow.js']=(function(module,exports){
     }
   
     function update () {
-      const currentSlide = slides[activeSlideIndex];
+      const activeSlide = slides[activeSlideIndex];
       const size = slides.length;
+  
+      if (!size) {
+        elements.status.innerHTML = '';
+        return;
+      }
   
       deactivateElement(activeSlideElement);
       activeSlideElement = elements.slideContainer.childNodes[activeSlideIndex];
       activateElement(activeSlideElement);
-      elements.status.innerHTML = `${activeSlideIndex + 1} av ${size}: ${currentSlide.caption}`;
+      elements.status.innerHTML = `${activeSlideIndex + 1} av ${size}: ${activeSlide.caption}`;
     }
   
     function handleKeydown (evt) {
@@ -51,8 +56,6 @@ _m_['js/slideshow.js']=(function(module,exports){
     }
   
     function mount () {
-      console.log('mount');
-  
       slides = initialState.slides || [];
       activeSlideIndex = initialState.activeIndex || 0;
       activeSlideElement = null;
