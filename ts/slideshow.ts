@@ -32,13 +32,13 @@ function slideshow (rootElement: Element, initialState: InitialState) {
   }
 
   function update () {
-    const currentSlide = slides[activeSlideIndex];
+    const activeSlide = slides[activeSlideIndex];
     const size = slides.length;
 
     deactivateElement(<Element>activeSlideElement);
     activeSlideElement = <Element>elements.slideContainer.childNodes[activeSlideIndex];
     activateElement(<Element>activeSlideElement);
-    elements.status.innerHTML = `${activeSlideIndex + 1} av ${size}: ${currentSlide.caption}`;
+    elements.status.innerHTML = `${activeSlideIndex + 1} av ${size}: ${activeSlide.caption}`;
   }
 
   function handleKeydown (evt: KeyboardEvent) {

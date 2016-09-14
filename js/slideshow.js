@@ -15,13 +15,13 @@ function slideshow (rootElement, initialState = {}) {
   }
 
   function update () {
-    const currentSlide = slides[activeSlideIndex];
+    const activeSlide = slides[activeSlideIndex];
     const size = slides.length;
 
     deactivateElement(activeSlideElement);
     activeSlideElement = elements.slideContainer.childNodes[activeSlideIndex];
     activateElement(activeSlideElement);
-    elements.status.innerHTML = `${activeSlideIndex + 1} av ${size}: ${currentSlide.caption}`;
+    elements.status.innerHTML = `${activeSlideIndex + 1} av ${size}: ${activeSlide.caption}`;
   }
 
   function handleKeydown (evt) {
