@@ -34,8 +34,6 @@ function slideshow (rootElement, initialState = {}) {
   }
 
   function mount () {
-    console.log('mount');
-
     slides = initialState.slides || [];
     activeSlideIndex = initialState.activeIndex || 0;
     activeSlideElement = null;
