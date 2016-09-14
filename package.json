@@ -13,7 +13,7 @@
     "buddy": "5.1.4",
     "buddy-plugin-babel": "6.13.2-1",
     "buddy-plugin-csso": "2.2.0",
-    "buddy-plugin-typescript": "^1.8.10",
+    "buddy-plugin-typescript": "1.8.10",
     "buddy-server": "1.0.1",
     "eslint": "3.4.0",
     "eslint-config-nrk": "4.0.0",
