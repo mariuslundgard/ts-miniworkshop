@@ -11,11 +11,11 @@ export type Slide = {
 };
 
 export type InitialState = {
-  slides: Slide[];
-  activeIndex: number;
+  slides?: Slide[];
+  activeIndex?: number;
 };
 
-function slideshow (rootElement: Element, initialState: InitialState) {
+function slideshow (rootElement: Element, initialState: InitialState = {}) {
   let elements: Elements;
   let slides: Slide[];
   let activeSlideIndex: number;
