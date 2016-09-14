@@ -19,7 +19,7 @@ function slideshow (rootElement: Element, initialState: InitialState) {
   let elements: Elements;
   let slides: Slide[];
   let activeSlideIndex: number;
-  let activeSlideElement: Node;
+  let activeSlideElement: Element;
 
   function prev () {
     activeSlideIndex = activeSlideIndex === 0 ? slides.length - 1 : activeSlideIndex - 1;
@@ -36,7 +36,7 @@ function slideshow (rootElement: Element, initialState: InitialState) {
     const size = slides.length;
 
     deactivateElement(<Element>activeSlideElement);
-    activeSlideElement = elements.slideContainer.childNodes[activeSlideIndex];
+    activeSlideElement = <Element>elements.slideContainer.childNodes[activeSlideIndex];
     activateElement(<Element>activeSlideElement);
     elements.status.innerHTML = `${activeSlideIndex + 1} av ${size}: ${currentSlide.caption}`;
   }
